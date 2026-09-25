@@ -1,0 +1,6 @@
+{
+  "name": "Máscara TV",
+  "description": "Tu pantalla. Tus historias. Plataforma de videos, comedia, drama, shorts y creadores inspirada en la televisión retro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,104 @@
+{
+  "entities": {
+    "users": {
+      "title": "users",
+      "description": "Perfiles de usuarios y datos de autenticación de MáscaraTV",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "channelId": { "type": "string" },
+        "isAdmin": { "type": "boolean" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["uid", "displayName", "email"]
+    },
+    "channels": {
+      "title": "channels",
+      "description": "Canales creados por los usuarios en MáscaraTV",
+      "type": "object",
+      "properties": {
+        "channelId": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "name": { "type": "string" },
+        "handle": { "type": "string" },
+        "description": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "bannerUrl": { "type": "string" },
+        "subscribersCount": { "type": "number" },
+        "isVerified": { "type": "boolean" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["channelId", "ownerId", "name", "handle"]
+    },
+    "videos": {
+      "title": "videos",
+      "description": "Metadatos y enlaces de almacenamiento de videos y shorts en MáscaraTV",
+      "type": "object",
+      "properties": {
+        "videoId": { "type": "string" },
+        "userId": { "type": "string" },
+        "channelId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "videoUrl": { "type": "string" },
+        "thumbnailUrl": { "type": "string" },
+        "durationFormatted": { "type": "string" },
+        "durationSeconds": { "type": "number" },
+        "viewsCount": { "type": "number" },
+        "likesCount": { "type": "number" },
+        "dislikesCount": { "type": "number" },
+        "isShort": { "type": "boolean" },
+        "allowDownload": { "type": "boolean" },
+        "visibility": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["videoId", "channelId", "title", "videoUrl", "thumbnailUrl", "category"]
+    },
+    "comments": {
+      "title": "comments",
+      "description": "Comentarios de los espectadores en los videos",
+      "type": "object",
+      "properties": {
+        "commentId": { "type": "string" },
+        "videoId": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "text": { "type": "string" },
+        "likesCount": { "type": "number" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["commentId", "videoId", "userId", "text"]
+    },
+    "likes": {
+      "title": "likes",
+      "description": "Indicadores de Me Gusta para videos y comentarios",
+      "type": "object",
+      "properties": {
+        "likeId": { "type": "string" },
+        "targetId": { "type": "string" },
+        "targetType": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["likeId", "targetId", "userId"]
+    },
+    "subscriptions": {
+      "title": "subscriptions",
+      "description": "Relaciones de suscripción entre usuarios y canales",
+      "type": "object",
+      "properties": {
+        "subscriptionId": { "type": "string" },
+        "userId": { "type": "string" },
+        "channelId": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["subscriptionId", "userId", "channelId"]
+    }
+  }
+}

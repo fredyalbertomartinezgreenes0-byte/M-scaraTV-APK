@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Máscara TV</string>
+    <string name="slogan">Tu pantalla. Tus historias.</string>
+    <string name="search_hint">Buscar videos, creadores o temas…</string>
+</resources>
